@@ -6,6 +6,8 @@ import fotoBarra4 from './assets/images/fotos de la barra web/barra4.png'
 import fotoBarra5 from './assets/images/fotos de la barra web/barra5.png'
 import probarrasLogo from './assets/images/probarras logo.png'
 import logoTexto from './assets/images/probarras logo texto.png'
+import cliente1 from './assets/images/clientes pb/cliente1.jpeg'
+import cliente2 from './assets/images/clientes pb/cliente2.jpg'
 import './App.css'
 
 /* ---- Hero photos ---- */
@@ -17,13 +19,10 @@ const heroPhotos = [
   { src: fotoBarra5, alt: 'Pro Barras Rig - Vista 4' },
 ]
 
-/* ---- Gallery photos ---- */
+/* ---- Client photos ---- */
 const galleryPhotos = [
-  { src: fotoPrincipal, alt: 'Pro Barras Rig - Vista principal' },
-  { src: fotoBarra1, alt: 'Pro Barras Rig - Vista 1' },
-  { src: fotoBarra3, alt: 'Pro Barras Rig - Vista 2' },
-  { src: fotoBarra4, alt: 'Pro Barras Rig - Vista 3' },
-  { src: fotoBarra5, alt: 'Pro Barras Rig - Vista 4' },
+  { src: cliente1, alt: 'Gimnasio cliente Pro Barras 1' },
+  { src: cliente2, alt: 'Gimnasio cliente Pro Barras 2' },
 ]
 
 import accBarra1 from './assets/images/accesorios pb/barra1.png'
@@ -118,17 +117,12 @@ function App() {
 
       {/* Hero Section */}
       <main className="hero-section">
-        <div className="hero-badge">EQUIPAMIENTO PROFESIONAL</div>
+        <div className="hero-badge">Empresa #1 en Venezuela</div>
         <h1 className="hero-title">
-          Lleva tu <span className="highlight">gimnasio</span> al
+          Imagina tener un <span className="highlight">gimnasio personal</span>
           <br />
-          siguiente nivel
+          en casa!
         </h1>
-        <p className="hero-subtitle">
-          Racks, barras y accesorios de acero de alta resistencia.
-          <br />
-          Diseñados para durar. Hechos en Venezuela.
-        </p>
 
         {/* Hero Image Carousel */}
         <div className="hero-image-wrapper">
@@ -162,10 +156,14 @@ function App() {
           className="cta-button"
         >
           <span className="cta-icon">💬</span>
-          Comprar ahora
+          Cotizar via WhatsApp
           <span className="cta-arrow">→</span>
         </a>
-        <p className="cta-hint">Escríbenos por WhatsApp y recibe asesoría personalizada</p>
+        <p className="hero-subtitle" style={{ marginTop: '1.5rem' }}>
+          Rig modular RRO-BARRAS personalizable a tu gusto, Convierte un espacion pequeño en un gimnasio completo, con todo lo que necesitas para llevar tu entrenamiento al siguiente nivel.
+          <br />
+          Diseñados para durar. Hechos en Venezuela.
+        </p>
       </main>
 
       {/* Accessories Section */}
@@ -200,15 +198,15 @@ function App() {
         </div>
       </section>
 
-      {/* Photo Gallery Carousel */}
+      {/* Clients Photo Gallery Carousel */}
       <section className="gallery-section">
         <div className="section-header">
-          <div className="section-badge">GALERÍA</div>
+          <div className="section-badge">NUESTROS CLIENTES</div>
           <h2 className="section-title">
-            Conoce el <span className="highlight">producto</span>
+            Mas de 15 años <span className="highlight">creando</span>
           </h2>
           <p className="section-subtitle">
-            Explora cada detalle de nuestro rig y sus acabados profesionales.
+            Crear productos de alta calidad nos permitido conectar con clientes que duran para siempre, que confian en nuestro trabajo y que nos ayudan a crecer.
           </p>
         </div>
 
