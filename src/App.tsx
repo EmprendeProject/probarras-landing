@@ -191,8 +191,10 @@ function App() {
               <div className="accessory-photo-wrapper">
                 <img src={item.photo} alt={item.name} className="accessory-photo" />
               </div>
-              <h3 className="accessory-name">{item.name}</h3>
-              <p className="accessory-desc">{item.description}</p>
+              <div className="accessory-content">
+                <h3 className="accessory-name">{item.name}</h3>
+                <p className="accessory-desc">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
