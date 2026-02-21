@@ -150,7 +150,7 @@ function App() {
 
         {/* CTA Button */}
         <a
-          href="https://wa.me/584241234567"
+          href="https://wa.me/584122175032?text=Hola!%20Vengo%20de%20la%20Web%20y%20estoy%20interesado%20en%20realizar%20una%20cotizacion%20de%20un%20rig%2C%20PRO%20BARRAS."
           target="_blank"
           rel="noopener noreferrer"
           className="cta-button"
@@ -250,7 +250,7 @@ function App() {
       <section className="bottom-cta-section">
         <h2 className="bottom-cta-title">¿Listo para equipar tu espacio?</h2>
         <a
-          href="https://wa.me/584241234567"
+          href="https://wa.me/584122175032?text=Hola!%20Vengo%20de%20la%20Web%20y%20estoy%20interesado%20en%20realizar%20una%20cotizacion%20de%20un%20rig%2C%20PRO%20BARRAS."
           target="_blank"
           rel="noopener noreferrer"
           className="cta-button bottom-cta-btn"
