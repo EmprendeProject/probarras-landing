@@ -25,7 +25,7 @@ const galleryPhotos = [
   { src: cliente2, alt: 'Gimnasio cliente Pro Barras 2' },
 ]
 
-import accBarra1 from './assets/images/accesorios pb/barra1.png'
+import accLandmine from './assets/images/accesorios pb/landmine.png'
 import accGanchos from './assets/images/accesorios pb/ganchos.png'
 import accMulti from './assets/images/accesorios pb/multiagarre.png'
 import accMulti2 from './assets/images/accesorios pb/multiagarre2.png'
@@ -49,14 +49,14 @@ const accessories = [
     photo: accMulti2,
   },
   {
-    name: 'J-Hooks',
-    description: 'Ganchos de acero reforzado para soporte seguro de la barra.',
-    photo: accGanchos,
+    name: 'Land Mine',
+    description: 'Este es uno de los accesorios mas versatiles, ya que te abre un enorme abanico de ejercicios, podes usar la barra para trabajar todos los grupos musculares',
+    photo: accLandmine,
   },
   {
-    name: 'Safety Arms',
-    description: 'Brazos de seguridad ajustables para entrenar sin spotter.',
-    photo: accBarra1,
+    name: 'Ganchos J',
+    description: 'Ganchos de acero reforzado para soporte seguro de la barra.',
+    photo: accGanchos,
   },
   {
     name: 'Porta Barra',
