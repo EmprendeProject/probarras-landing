@@ -37,31 +37,37 @@ const accessories = [
     name: 'Barra Multi-Grip',
     description: 'Barra de dominadas con múltiples agarres para variedad de ejercicios.',
     photo: accMulti,
+    price: 'incluida',
   },
   {
     name: 'Estación de Fondos',
     description: 'Barras paralelas para fondos, tríceps y abdominales.',
     photo: accParalelas,
+    price: '$265',
   },
   {
-    name: 'Sistema de Poleas',
-    description: 'Polea alta y baja para jalones, remos y extensiones de cable.',
+    name: 'Barra Multigrip',
+    description: 'Barra de dominadas con múltiples agarres para variedad de ejercicios.',
     photo: accMulti2,
+    price: '$170',
   },
   {
     name: 'Land Mine',
-    description: 'Este es uno de los accesorios mas versatiles, ya que te abre un enorme abanico de ejercicios, podes usar la barra para trabajar todos los grupos musculares',
+    description: 'Este es uno de los accesorios mas versatiles, ya que te abre un enorme abanico de ejercicios',
     photo: accLandmine,
+    price: '$120',
   },
   {
     name: 'Ganchos J',
     description: 'Ganchos de acero reforzado para soporte seguro de la barra.',
     photo: accGanchos,
+    price: '$180',
   },
   {
     name: 'Porta Barra',
     description: 'Soporte vertical para almacenar tu barra olímpica con seguridad.',
     photo: accPorta,
+    price: '$80',
   },
 ]
 
@@ -121,7 +127,7 @@ function App() {
         <h1 className="hero-title">
           Imagina tener un <span className="highlight">gimnasio personal</span>
           <br />
-          en casa!
+          en casa desde 990$!
         </h1>
 
         {/* Hero Image Carousel */}
@@ -192,6 +198,7 @@ function App() {
               <div className="accessory-content">
                 <h3 className="accessory-name">{item.name}</h3>
                 <p className="accessory-desc">{item.description}</p>
+                <div className="accessory-price">{item.price}</div>
               </div>
             </div>
           ))}
