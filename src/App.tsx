@@ -6,8 +6,16 @@ import fotoBarra4 from './assets/images/fotos de la barra web/barra4.png'
 import fotoBarra5 from './assets/images/fotos de la barra web/barra5.png'
 import probarrasLogo from './assets/images/probarras logo.png'
 import logoTexto from './assets/images/probarras logo texto.png'
-import cliente1 from './assets/images/clientes pb/cliente1.jpeg'
-import cliente2 from './assets/images/clientes pb/cliente2.jpg'
+import cliente1 from './assets/images/clientes pb/1.JPG'
+import cliente2 from './assets/images/clientes pb/2.JPG'
+import cliente3 from './assets/images/clientes pb/3.jpg'
+import cliente4 from './assets/images/clientes pb/4.JPG'
+import cliente5 from './assets/images/clientes pb/5.jpg'
+import cliente6 from './assets/images/clientes pb/6.jpg'
+import cliente7 from './assets/images/clientes pb/7.jpg'
+import cliente8 from './assets/images/clientes pb/8.jpeg'
+import cliente9 from './assets/images/clientes pb/9.jpg'
+import cliente10 from './assets/images/clientes pb/10.jpeg'
 import './App.css'
 
 /* ---- Hero photos ---- */
@@ -23,6 +31,14 @@ const heroPhotos = [
 const galleryPhotos = [
   { src: cliente1, alt: 'Gimnasio cliente Pro Barras 1' },
   { src: cliente2, alt: 'Gimnasio cliente Pro Barras 2' },
+  { src: cliente3, alt: 'Gimnasio cliente Pro Barras 3' },
+  { src: cliente4, alt: 'Gimnasio cliente Pro Barras 4' },
+  { src: cliente5, alt: 'Gimnasio cliente Pro Barras 5' },
+  { src: cliente6, alt: 'Gimnasio cliente Pro Barras 6' },
+  { src: cliente7, alt: 'Gimnasio cliente Pro Barras 7' },
+  { src: cliente8, alt: 'Gimnasio cliente Pro Barras 8' },
+  { src: cliente9, alt: 'Gimnasio cliente Pro Barras 9' },
+  { src: cliente10, alt: 'Gimnasio cliente Pro Barras 10' },
 ]
 
 import accLandmine from './assets/images/accesorios pb/landmine.png'
@@ -125,7 +141,7 @@ function App() {
       <main className="hero-section">
         <div className="hero-badge">Empresa #1 en Venezuela</div>
         <h1 className="hero-title">
-          Imagina tener un <span className="highlight">gimnasio personal</span>
+          Instala tu propio <span className="highlight">gimnasio personal</span>
           <br />
           en casa desde 990$!
         </h1>
@@ -133,9 +149,9 @@ function App() {
         {/* Hero Image Carousel */}
         <div className="hero-image-wrapper">
           <div className="image-glow" />
-          <div className="hero-carousel-track" style={{ transform: `translateX(-${heroIdx * 100}%)` }}>
+          <div className="hero-carousel-track">
             {heroPhotos.map((photo, i) => (
-              <div className="hero-slide" key={i}>
+              <div className={`hero-slide ${i === heroIdx ? 'active' : ''}`} key={i}>
                 <img src={photo.src} alt={photo.alt} className="hero-image" />
                 <div className="hero-slide-gradient" />
               </div>
@@ -161,9 +177,11 @@ function App() {
           rel="noopener noreferrer"
           className="cta-button"
         >
-          <span className="cta-icon">💬</span>
-          Cotizar via WhatsApp
-          <span className="cta-arrow">→</span>
+          <span className="cta-play-icon">▶</span>
+          <span className="cta-text-group">
+            <span className="cta-main-text">Cotizar via WhatsApp</span>
+            <span className="cta-sub-text">GRATIS · SIN COMPROMISO</span>
+          </span>
         </a>
         <p className="hero-subtitle" style={{ marginTop: '1.5rem' }}>
           Rig modular RRO-BARRAS personalizable a tu gusto, Convierte un espacion pequeño en un gimnasio completo, con todo lo que necesitas para llevar tu entrenamiento al siguiente nivel.
@@ -171,6 +189,43 @@ function App() {
           Diseñados para durar. Hechos en Venezuela.
         </p>
       </main>
+
+      {/* Clients Photo Gallery Carousel */}
+      <section className="gallery-section">
+        <div className="section-header">
+          <div className="section-badge">NUESTROS CLIENTES</div>
+          <h2 className="section-title">
+            Mas de 15 años <span className="highlight">creando</span>
+          </h2>
+          <p className="section-subtitle">
+            Crear productos de alta calidad nos permitido conectar con clientes que duran para siempre, que confian en nuestro trabajo y que nos ayudan a crecer.
+          </p>
+        </div>
+
+        <div className="gallery-carousel">
+          <div className="gallery-track-wrapper">
+            <div className="gallery-track">
+              {galleryPhotos.map((photo, i) => (
+                <div className={`gallery-slide ${i === current ? 'active' : ''}`} key={i}>
+                  <img src={photo.src} alt={photo.alt} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Dots */}
+        <div className="gallery-dots">
+          {galleryPhotos.map((_, i) => (
+            <button
+              key={i}
+              className={`gallery-dot ${i === current ? 'active' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Ir a foto ${i + 1}`}
+            />
+          ))}
+        </div>
+      </section>
 
       {/* Accessories Section */}
       <section className="accessories-section">
@@ -201,54 +256,6 @@ function App() {
                 <div className="accessory-price">{item.price}</div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Clients Photo Gallery Carousel */}
-      <section className="gallery-section">
-        <div className="section-header">
-          <div className="section-badge">NUESTROS CLIENTES</div>
-          <h2 className="section-title">
-            Mas de 15 años <span className="highlight">creando</span>
-          </h2>
-          <p className="section-subtitle">
-            Crear productos de alta calidad nos permitido conectar con clientes que duran para siempre, que confian en nuestro trabajo y que nos ayudan a crecer.
-          </p>
-        </div>
-
-        <div className="gallery-carousel">
-          <button className="gallery-arrow gallery-arrow-left" onClick={prev} aria-label="Anterior">
-            ‹
-          </button>
-
-          <div className="gallery-track-wrapper">
-            <div
-              className="gallery-track"
-              style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-              {galleryPhotos.map((photo, i) => (
-                <div className="gallery-slide" key={i}>
-                  <img src={photo.src} alt={photo.alt} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <button className="gallery-arrow gallery-arrow-right" onClick={next} aria-label="Siguiente">
-            ›
-          </button>
-        </div>
-
-        {/* Dots */}
-        <div className="gallery-dots">
-          {galleryPhotos.map((_, i) => (
-            <button
-              key={i}
-              className={`gallery-dot ${i === current ? 'active' : ''}`}
-              onClick={() => goTo(i)}
-              aria-label={`Ir a foto ${i + 1}`}
-            />
           ))}
         </div>
       </section>
