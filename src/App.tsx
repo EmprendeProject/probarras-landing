@@ -6,10 +6,10 @@ import fotoBarra4 from './assets/images/fotos de la barra web/barra4.png'
 import fotoBarra5 from './assets/images/fotos de la barra web/barra5.png'
 import probarrasLogo from './assets/images/probarras logo.png'
 import logoTexto from './assets/images/probarras logo texto.png'
-import cliente1 from './assets/images/clientes pb/1.JPG'
-import cliente2 from './assets/images/clientes pb/2.JPG'
+import cliente1 from './assets/images/clientes pb/1.jpg'
+import cliente2 from './assets/images/clientes pb/2.jpg'
 import cliente3 from './assets/images/clientes pb/3.jpg'
-import cliente4 from './assets/images/clientes pb/4.JPG'
+import cliente4 from './assets/images/clientes pb/4.jpg'
 import cliente5 from './assets/images/clientes pb/5.jpg'
 import cliente6 from './assets/images/clientes pb/6.jpg'
 import cliente7 from './assets/images/clientes pb/7.jpg'
@@ -117,7 +117,6 @@ function App() {
   )
 
   const next = useCallback(() => goTo(current + 1), [current, goTo])
-  const prev = useCallback(() => goTo(current - 1), [current, goTo])
 
   useEffect(() => {
     timeoutRef.current = setTimeout(next, 4000)
